@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://dipfbppjyx4b7"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_0bdpq"]
+[ext_resource type="Texture2D" uid="uid://cvobf0com4sw6" path="res://icon.svg" id="2_0q5j7"]
+[ext_resource type="PackedScene" uid="uid://f77f3ghuv2vw" path="res://coletavel.tscn" id="3_crvip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsmtc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7sj8t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b77d"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(848, 464)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+texture = ExtResource("2_0q5j7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+scale = Vector2(5.28, 5.48)
+shape = SubResource("RectangleShape2D_xsmtc")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(608, 569)
+script = ExtResource("1_0bdpq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_0q5j7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+scale = Vector2(5.68, 5.84)
+shape = SubResource("RectangleShape2D_7sj8t")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -105)
+zoom = Vector2(0.685, 0.685)
+position_smoothing_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(476, 636)
+scale = Vector2(18.75, 0.235)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2(5.25, 1)
+shape = SubResource("RectangleShape2D_4b77d")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("2_0q5j7")
+
+[node name="Coletavel" parent="." instance=ExtResource("3_crvip")]
+position = Vector2(-744, 366)
+
+[node name="Coletavel2" parent="." instance=ExtResource("3_crvip")]
+position = Vector2(-71, 366)
+
+[node name="Coletavel3" parent="." instance=ExtResource("3_crvip")]
+position = Vector2(-1375, 366)
+
+[node name="Coletavel4" parent="." instance=ExtResource("3_crvip")]
+position = Vector2(-1990, 366)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "{dj_coin}"

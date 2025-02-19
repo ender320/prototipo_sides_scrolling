@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8pmwkysc3a8q"]
+
+[ext_resource type="Script" path="res://estudos.gd" id="1_ksqy5"]
+[ext_resource type="Texture2D" uid="uid://cvobf0com4sw6" path="res://icon.svg" id="2_hiw2i"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_ksqy5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_hiw2i")

@@ -12,13 +12,13 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="Plataforma" type="StaticBody2D" parent="."]
 position = Vector2(848, 464)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+[node name="Sprite2D" type="Sprite2D" parent="Plataforma"]
 texture = ExtResource("2_0q5j7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma"]
 scale = Vector2(5.28, 5.48)
 shape = SubResource("RectangleShape2D_xsmtc")
 
@@ -64,4 +64,3 @@ position = Vector2(-1990, 366)
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
-text = "{dj_coin}"
